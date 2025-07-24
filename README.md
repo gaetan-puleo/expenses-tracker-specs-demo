@@ -254,14 +254,6 @@ npm run build
 
 The `dist/` folder will contain the production-ready application.
 
-## 🤝 Contributing
-
-1. Create a feature specification in `ai/specs/`
-2. Use Claude Code to implement the feature
-3. Ensure all tests pass
-4. Update documentation as needed
-5. Submit a pull request
-
 ## 📄 License
 
 This project is for demonstration purposes and showcases specification-driven development with AI assistance.

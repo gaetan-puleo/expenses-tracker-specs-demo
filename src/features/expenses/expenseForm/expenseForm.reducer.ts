@@ -26,7 +26,7 @@ const initialState: ExpenseFormState = {
     amount: '',
     description: '',
     category: '',
-    date: new Date().toISOString().split('T')[0] // Default to today
+    date: ''
   },
   errors: {},
   isSubmitting: false,
@@ -58,7 +58,7 @@ export const expenseFormReducer = createReducer(initialState, (builder) => {
         amount: '',
         description: '',
         category: '',
-        date: new Date().toISOString().split('T')[0]
+        date: ''
       }
       state.errors = {}
       state.isSubmitting = false
@@ -87,7 +87,7 @@ export const expenseFormReducer = createReducer(initialState, (builder) => {
         amount: '',
         description: '',
         category: '',
-        date: new Date().toISOString().split('T')[0]
+        date: ''
       }
       state.errors = {}
       state.isSubmitting = false

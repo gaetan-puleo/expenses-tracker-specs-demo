@@ -1,6 +1,13 @@
 import { createReducer } from '@reduxjs/toolkit'
 import { createExpenseStart, createExpenseSuccess, createExpenseError } from './createExpense.events'
 
+export interface CreateExpenseInput {
+  amount: number
+  description: string
+  category: string
+  date: string
+}
+
 export interface CreateExpenseState {
   status: 'idle' | 'loading' | 'success' | 'failed'
   error: string | null

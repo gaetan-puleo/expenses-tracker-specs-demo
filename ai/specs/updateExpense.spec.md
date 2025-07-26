@@ -33,6 +33,10 @@ User Input › Load Existing Expense › Validation › Dispatch Update Action �
 - selectUpdateExpenseError: Returns any error message from failed expense update
 
 **updateExpense.reducer.ts**
+- UpdateExpenseInput: Input interface for updating expenses
+  - Properties: id (string), amount (number), description (string), category (string), date (string)
+- UpdateExpenseState: State interface for expense update
+  - Properties: status ('idle' | 'loading' | 'success' | 'failed'), error (string | null)
 - updateExpenseReducer: Redux reducer handling updateExpense state changes
   - Initial state: { status: 'idle', error: null }
   - Handles loading, success, and error states
@@ -55,8 +59,8 @@ User Input › Load Existing Expense › Validation › Dispatch Update Action �
 **expense.entity.ts**
 - Expense: Entity representing an expense record
   - Properties: id (string), amount (number), description (string), category (string), date (string), createdAt (string)
-- UpdateExpenseInput: Input type for updating expenses
-  - Properties: id (string), amount (number), description (string), category (string), date (string)
+- EXPENSE_CATEGORIES: Constant array of available expense categories
+- ExpenseCategory: Type representing valid expense category values
 
 **expenses.gateway.ts**
 - ExpensesGateway: Interface for expense-related operations

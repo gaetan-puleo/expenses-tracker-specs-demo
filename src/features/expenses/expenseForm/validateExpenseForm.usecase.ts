@@ -1,6 +1,7 @@
 import { setExpenseFormErrors } from './expenseForm.events'
 import { AppThunk } from '../../../store/init-store'
-import { ExpenseFormData, FormErrors, EXPENSE_CATEGORIES, ExpenseCategory } from '../../shared/entities/expense.entity'
+import { ExpenseFormData, FormErrors } from './expenseForm.reducer'
+import { EXPENSE_CATEGORIES, ExpenseCategory } from '../../shared/entities/expense.entity'
 
 const validateAmount = (amount: string): string | null => {
   if (!amount.trim()) {

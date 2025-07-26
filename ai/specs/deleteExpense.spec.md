@@ -40,6 +40,10 @@ User triggers deletion › deleteExpense use case starts › Loading state activ
 - Return type: Action with error payload
 
 ### deleteExpense.reducer.ts
+**DeleteExpenseState**
+- Description: State interface for expense deletion
+- Properties: status ('idle' | 'loading' | 'success' | 'failed'), error (string | null), deletingExpenseId (string | null)
+
 **deleteExpenseReducer**
 - Description: Manages the state of expense deletion process
 - Parameters: state (DeleteExpenseState), action (DeleteExpenseAction)

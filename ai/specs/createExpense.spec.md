@@ -31,6 +31,10 @@ User Input › Validation › Dispatch Create Action › Fake Gateway Call › S
 - selectCreateExpenseError: Returns any error message from failed expense creation
 
 **createExpense.reducer.ts**
+- CreateExpenseInput: Input interface for creating expenses
+  - Properties: amount (number), description (string), category (string), date (string)
+- CreateExpenseState: State interface for expense creation
+  - Properties: status ('idle' | 'loading' | 'success' | 'failed'), error (string | null)
 - createExpenseReducer: Redux reducer handling createExpense state changes
   - Initial state: { status: 'idle', error: null }
   - Handles loading, success, and error states
@@ -53,8 +57,8 @@ User Input › Validation › Dispatch Create Action › Fake Gateway Call › S
 **expense.entity.ts**
 - Expense: Entity representing an expense record
   - Properties: id (string), amount (number), description (string), category (string), date (string), createdAt (string)
-- CreateExpenseInput: Input type for creating expenses
-  - Properties: amount (number), description (string), category (string), date (string)
+- EXPENSE_CATEGORIES: Constant array of available expense categories
+- ExpenseCategory: Type representing valid expense category values
 
 **expenses.gateway.ts**
 - ExpensesGateway: Interface for expense-related operations

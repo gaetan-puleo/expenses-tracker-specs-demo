@@ -28,6 +28,12 @@ Modal Open › Form Mount/Pre-populate › User Input › Real-time Validation �
 **Descriptions**
 
 **expenseForm.reducer.ts**
+- ExpenseFormData: Form data interface
+  - Properties: amount (string), description (string), category (string), date (string)
+- FormErrors: Form validation errors interface
+  - Properties: amount? (string), description? (string), category? (string), date? (string), general? (string)
+- ExpenseFormState: Complete form state interface
+  - Properties: data (ExpenseFormData), errors (FormErrors), isSubmitting (boolean), isValid (boolean), isEditMode (boolean), editingExpenseId (string | null), isModalOpen (boolean)
 - expenseFormReducer: Redux reducer handling form state changes
   - Initial state: { data: { amount: '', description: '', category: '', date: '' }, errors: {}, isSubmitting: false, isValid: false, isEditMode: false, editingExpenseId: null, isModalOpen: false }
   - Handles field updates, validation results, submission states, edit mode, and modal visibility
@@ -73,10 +79,10 @@ Modal Open › Form Mount/Pre-populate › User Input › Real-time Validation �
 - Tests edge cases for each field type
 
 **expense.entity.ts**
-- ExpenseFormData: Form state interface
-  - Properties: amount (string), description (string), category (string), date (string)
-- FormErrors: Validation errors interface
-  - Properties: amount? (string), description? (string), category? (string), date? (string), general? (string)
+- Expense: Entity representing an expense record
+  - Properties: id (string), amount (number), description (string), category (string), date (string), createdAt (string)
+- EXPENSE_CATEGORIES: Constant array of available expense categories
+- ExpenseCategory: Type representing valid expense category values
 
 **Validation Rules**
 

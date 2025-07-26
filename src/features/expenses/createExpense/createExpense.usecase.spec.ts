@@ -2,7 +2,7 @@ import { describe, it, expect, beforeEach } from 'vitest'
 import { AppStore, initStore } from '../../../store/init-store'
 import { FakeExpensesGateway } from '../../shared/gateways/implementations/FakeExpenses.gateway'
 import { createExpense } from './createExpense.usecase'
-import { CreateExpenseInput } from '../../shared/entities/expense.entity'
+import { CreateExpenseInput } from './createExpense.reducer'
 import { selectCreateExpenseStatus, selectCreateExpenseError } from './createExpense.selector'
 
 describe('createExpense use-case', () => {

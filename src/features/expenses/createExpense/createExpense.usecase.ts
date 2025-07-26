@@ -1,4 +1,4 @@
-import { CreateExpenseInput } from '../../shared/entities/expense.entity'
+import { CreateExpenseInput } from './createExpense.reducer'
 import { createExpenseStart, createExpenseSuccess, createExpenseError } from './createExpense.events'
 import { AppThunk } from '../../../store/init-store'
 

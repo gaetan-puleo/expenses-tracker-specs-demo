@@ -1,4 +1,6 @@
-import { CreateExpenseInput, Expense, UpdateExpenseInput } from '../../entities/expense.entity'
+import { Expense } from '../../entities/expense.entity'
+import { CreateExpenseInput } from '../../../expenses/createExpense/createExpense.reducer'
+import { UpdateExpenseInput } from '../../../expenses/updateExpense/updateExpense.reducer'
 import { ExpensesGateway } from '../interfaces/expenses.gateway'
 
 export class FakeExpensesGateway implements ExpensesGateway {

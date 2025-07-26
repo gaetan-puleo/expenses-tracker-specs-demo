@@ -1,5 +1,4 @@
 import { createReducer } from '@reduxjs/toolkit'
-import { ExpenseFormData, FormErrors } from '../../shared/entities/expense.entity'
 import { 
   updateExpenseFormField, 
   setExpenseFormErrors, 
@@ -10,6 +9,21 @@ import {
   openExpenseModal,
   closeExpenseModal
 } from './expenseForm.events'
+
+export interface ExpenseFormData {
+  amount: string
+  description: string
+  category: string
+  date: string
+}
+
+export interface FormErrors {
+  amount?: string
+  description?: string
+  category?: string
+  date?: string
+  general?: string
+}
 
 export interface ExpenseFormState {
   data: ExpenseFormData

@@ -1,4 +1,4 @@
-import { UpdateExpenseInput } from '../../shared/entities/expense.entity'
+import { UpdateExpenseInput } from './updateExpense.reducer'
 import { updateExpenseStart, updateExpenseSuccess, updateExpenseError } from './updateExpense.events'
 import { listExpensesSuccess } from '../listExpenses/listExpenses.events'
 import { AppThunk } from '../../../store/init-store'

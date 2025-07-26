@@ -1,5 +1,6 @@
 import { createAction } from '@reduxjs/toolkit'
-import { FormErrors, Expense } from '../../shared/entities/expense.entity'
+import { FormErrors } from './expenseForm.reducer'
+import { Expense } from '../../shared/entities/expense.entity'
 
 export const updateExpenseFormField = createAction<{ field: string; value: string }>('expenseForm/updateField')
 

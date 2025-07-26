@@ -33,6 +33,8 @@ Component Mount › Dispatch List Action › Fake Gateway Call › Success/Error
 - selectExpensesCount: Returns the total number of expenses
 
 **listExpenses.reducer.ts**
+- ListExpensesState: State interface for expenses listing
+  - Properties: status ('idle' | 'loading' | 'success' | 'failed'), error (string | null), expenses (Expense[]), count (number)
 - listExpensesReducer: Redux reducer handling listExpenses state changes
   - Initial state: { status: 'idle', error: null, expenses: [], count: 0 }
   - Handles loading, success, and error states
@@ -55,6 +57,8 @@ Component Mount › Dispatch List Action › Fake Gateway Call › Success/Error
 **expense.entity.ts**
 - Expense: Entity representing an expense record
   - Properties: id (string), amount (number), description (string), category (string), date (string), createdAt (string)
+- EXPENSE_CATEGORIES: Constant array of available expense categories
+- ExpenseCategory: Type representing valid expense category values
 
 **expenses.gateway.ts**
 - ExpensesGateway: Interface for expense-related operations
